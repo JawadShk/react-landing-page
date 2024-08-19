@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{ --red: #D01C28;}
+
+*{ margin: 0; }
+
+body{ font-family: "Poppins", sans-serif; }
+
+nav{ display: flex; justify-content: space-between; align-items: center; height: 72px; max-width: 1440px; margin: 0 auto; }
+
+nav .nav-links ul{ display: flex; list-style: none; gap: 24px; }
+
+nav .nav-links ul li{ text-transform: uppercase; font-weight: 600; font-size: 16px; color: #2E2E2E; }
+
+nav .button button{ background-color: var(--red) ; color: #ffffff; font-size: 16px; font-weight: 600; padding: 8px 16px; border: 0px;  }
+
+.parent-div{ display: flex; align-items: center; height: calc(100vh - 72px);  max-width: 1280px; margin: 0 auto;}
+
+.hero-content{ display: flex; flex-direction: column; gap: 36px; }
+
+.hero-content h1{ font-size: 108px; font-weight: 800; line-height: 102px; }
+
+.hero-content p{ font-size: 16px; font-weight: 600; color: #5A5959; width: 400px; }
+
+.hero-content button:first-child{ font-size: 24px; font-weight: 600; padding: 8px 16px; background-color: #D01C28; color: #ffffff; border: 0; margin-right: 40px; }
+
+.hero-content button:last-child{ font-size: 24px; font-weight: 600; padding: 8px 16px; background-color: transparent; color: #5A5959; border: 1px solid #000000; }
+
+.hero-content .market-place p{ font-size: 16px; font-weight: 400; color: #5A5959; }
+
+.hero-content .market-place-logo img{ margin-right: 14px; }
+
+@media only screen and (max-width: 1024px) {
+
+  nav{ margin: 0 20px; }
+
+  .parent-div{ display:block; margin: 50px;}
+
+  .hero-content h1{ font-size: 80px; line-height: 70px; }
+
+  .hero-content p{ width: 100%; }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media only screen and (max-width: 767px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  nav{ margin: 5px auto; display: inline; text-align: center;}
+  
+  nav .nav-links ul{ justify-content: center; gap: 24px; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  nav .nav-links ul li{ font-size: 14px; font-weight: 400; margin: 14px 0px;}
 
-.App-link {
-  color: #61dafb;
-}
+  .parent-div{ display:block; margin: 50px;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  .hero-content h1{ font-size: 48px; line-height: 56px; }
+
+  .hero-content p{ font-size: 14px; width: 100%; }
+
+  .hero-content button:first-child{margin-bottom: 16px;}
+
+  .hero-content button{font-size: 14px !important; font-weight: 400;}
+
+  .hero-content{ gap: 16px; }
+
+  .hero-image img{ max-width: 100%; height: auto; }
+
+  .hero-content .market-place p{ font-size: 14px; font-weight: 400;}
 }
